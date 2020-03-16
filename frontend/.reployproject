@@ -1,0 +1,3 @@
+project: 15ddf6af-caa0-46eb-a70e-f4dcbdbfe246
+port: 3000
+docker_image: gcr.io/himank-jay/polyglott-nodejs:v1
