@@ -27,15 +27,23 @@ reploy auth
 ```
 reploy watch
 ```
-### Run any arbitrary command like you would locally prefixed by reploy run e.g. `reploy run <command>`
 
-1. Install requirements in the `backend` folder and start the flask app
+## Writing code!
+
+As a reploy user, you can run any arbitrary linux command prefixed by reploy run e.g. `reploy run <command>`. We've detailed the steps for getting started with both the frontend and backend apps below.
+
+### Backend (flask)
+
+Install requirements in the `backend` folder and start the flask app
 ```
 cd backend
 reploy run pip install -r requirements.txt
 reploy run python src/app.py
 ```
-2. In another terminal window, start the frontend
+
+### Frontend (react)
+
+Install requirements in the `frontend` folder and start the react app
 ```
 cd frontend
 reploy run npm install
