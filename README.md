@@ -37,8 +37,8 @@ As a reploy user, you can run any arbitrary linux command prefixed by reploy run
 Install requirements in the `backend` folder and start the flask app
 ```
 cd backend
-reploy run pip install -r requirements.txt
-reploy run python src/app.py
+reploy run pip3 install -r requirements.txt
+reploy run python3 src/app.py
 ```
 
 ### Frontend
