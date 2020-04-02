@@ -1,3 +1,0 @@
-project: jkuxct2arcsi41fabw99kfw
-port: 5000
-docker_image: gcr.io/himank-jay/polyglott-python3:v1

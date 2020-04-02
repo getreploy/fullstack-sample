@@ -1,35 +1,18 @@
 project: jkuxct2arcsi41fabw99kfw
+
 services:
-  - name: python
+  - name: golang
     relative-path: backend
     port: 5000
-    environment:
-      - KEY
-    image: gcr.io/himank-jay/polyglott-python3:v1
-    port-forward: true
-    commands:
-      - name: sample
-        run: |
-          echo "line 1"
-          echo "line 2"
-          echo "line 3"
-      - name: setup
-        run: |
-          echo "setup backend"
+    image: gcr.io/himank-jay/polyglott-go:v1
 
-  - name: node
+  - name: redis
+    relative-path: redis
+    port: 6379
+    ignore-all-args: true
+    image: gcr.io/himank-jay/redis:v1
+
+  - name: frontend
     relative-path: frontend
     port: 3000
-    environment:
-      - KEY
     image: gcr.io/himank-jay/polyglott-nodejs:v1
-    port-forward: true
-    commands:
-      - name: sample
-        run: |
-          echo "line 1"
-          echo "line 2"
-          echo "line 3"
-      - name: setup
-        run: |
-          echo "setup frontend"
