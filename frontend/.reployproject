@@ -1,3 +1,0 @@
-project: ixn99px3dszopzm5fzttrtq
-port: 3000
-docker_image: gcr.io/himank-jay/polyglott-nodejs:v1

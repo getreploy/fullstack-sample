@@ -5,18 +5,19 @@
 ### macOS
 
 ```
-cd /usr/local/bin && { curl -o reploy cli.getreploy.com/reploy-latest ; chmod +x reploy; cd -; }
+brew install getreploy/reploy/reploy
 ```
 
 Upgrade:
-`reploy update`
+`brew upgrade getreploy/reploy/reploy`
 
 ## Getting Started
 
-This repo has two reploy projects: a frontend react application in `/frontend`, and a backend flask application in `/backend`. In each of these directories, there is a `.reployproject` file which describes the environment that will be run against.
+This repo has two reploy projects: a frontend react application in `/frontend`, and a backend go application in `/backend`. At the top level directory, there is a `.reployproject` file which describes the environment that will be run against.
 
 1. Clone and step into the directory
 ```
+git clone github.com/getreploy/fullstack-sample
 cd fullstack-sample
 ```
 2. Sign up for an account and authenticate.
@@ -34,11 +35,10 @@ As a reploy user, you can run any arbitrary linux command prefixed by reploy run
 
 ### Backend
 
-Install requirements in the `backend` folder and start the flask app
+Step into the `backend` folder and start go app:
 ```
 cd backend
-reploy run pip3 install -r requirements.txt
-reploy run python3 src/app.py
+reploy run go run .
 ```
 
 ### Frontend
