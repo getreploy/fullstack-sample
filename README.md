@@ -1,6 +1,6 @@
 # Fullstack Sample Reploy App :) 
 
-## Installation and Upgrading
+## Installation
 
 ### macOS
 
