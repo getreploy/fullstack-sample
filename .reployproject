@@ -4,6 +4,7 @@ services:
   - name: golang
     relative-path: backend
     port: 5000
+    port-forward: true
     image: gcr.io/himank-jay/polyglott-go:v1
 
   - name: redis
