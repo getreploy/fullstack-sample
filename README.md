@@ -31,7 +31,7 @@ reploy auth
 ```
 3. Start the reploy watcher to watch for file changes in the given directory in a separate terminal window.
 ```
-reploy watch
+brew services start reploy
 ```
 
 ## Writing code!
