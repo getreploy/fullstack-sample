@@ -1,19 +1,16 @@
-project: jkuxct2arcsi41fabw99kfw
-
+id: jkuxct2arcsi41fabw99kfw
 services:
-  - name: golang
+  golang:
     relative-path: backend
     port: 5000
     port-forward: true
     image: gcr.io/himank-jay/polyglott-go:v1
-
-  - name: redis
+  redis:
     relative-path: redis
     port: 6379
     ignore-all-args: true
     image: gcr.io/himank-jay/redis:v1
-
-  - name: frontend
+  frontend:
     relative-path: frontend
     port: 3000
     image: gcr.io/himank-jay/polyglott-nodejs:v1
