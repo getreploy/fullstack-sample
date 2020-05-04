@@ -20,13 +20,17 @@ actions:
               service: redis
             - run: redis-cli FLUSHALL
               service: redis
-    start-frontend:
+    run-frontend:
         commands:
             - run: cd frontend && npm install
               service: frontend
             - run: cd frontend && npm start
               service: frontend
-    start-backend:
+    run-backend:
         commands:
             - run: cd backend && go run .
+              service: backend
+    run-backend-tests:
+        commands:
+            - run: cd backend && go test ./...
               service: backend
