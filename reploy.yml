@@ -3,16 +3,16 @@ services:
   backend:
     relative-path: backend
     port: 5000
-    image: gcr.io/himank-jay/polyglott-go:v1
+    image: reploy/go:v1
   redis:
     port: 6379
     ignore-all-args: true
-    image: gcr.io/himank-jay/redis:v1
+    image: reploy/redis:v1
   frontend:
     relative-path: frontend
     port: 3000
     port-forward: true
-    image: gcr.io/himank-jay/polyglott-nodejs:v1
+    image: reploy/nodejs:v1
 actions:
     flush-redis:
         commands:
