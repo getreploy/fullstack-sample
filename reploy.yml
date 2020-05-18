@@ -1,36 +1,20 @@
 id: rxzklsiwspodh2cnffer7g
 services:
   backend:
-    relative-path: backend
     port: 5000
     image: reploy/go:v1
+    commands:
+      - cd backend
+      - go run .    
   redis:
     port: 6379
-    ignore-all-args: true
     image: reploy/redis:v1
   frontend:
-    relative-path: frontend
     port: 3000
-    port-forward: true
     image: reploy/nodejs:v1
-actions:
-    flush-redis:
-        commands:
-            - run: redis-cli --version
-              service: redis
-            - run: redis-cli FLUSHALL
-              service: redis
-    run-frontend:
-        commands:
-            - run: cd frontend && npm install
-              service: frontend
-            - run: cd frontend && npm start
-              service: frontend
-    run-backend:
-        commands:
-            - run: cd backend && go run .
-              service: backend
-    run-backend-tests:
-        commands:
-            - run: cd backend && go test ./...
-              service: backend
+    environment:
+      CHOKIDAR_USEPOLLING: true
+    commands:
+      - cd frontend
+      - npm install
+      - npm start    
