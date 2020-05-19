@@ -33,7 +33,7 @@ func PongServer(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Fatalf("Failed to connect to redis server: %v", err)
 	}
-	fmt.Fprintf(w, "Hello, %s!", res)
+	fmt.Fprintf(w, "Yo, %s!", res)
 }
 
 func SetupCache() {
