@@ -25,7 +25,7 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-              Result: <br />
+              Chicken Nugget: <br />
               <code>{this.state.data}</code>
             </p>
             <a
@@ -34,7 +34,7 @@ class App extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Yo world.
+              Hello world.
             </a>
           </header>
         </div>

@@ -1,20 +1,11 @@
-id: rxzklsiwspodh2cnffer7g
 services:
   backend:
     port: 5000
     image: reploy/go:v1
-    commands:
+    commands: 
       - cd backend
-      - go run .    
+      - go build -o reploy
+      - ./reploy
   redis:
     port: 6379
     image: reploy/redis:v1
-  frontend:
-    port: 3000
-    image: reploy/nodejs:v1
-    environment:
-      CHOKIDAR_USEPOLLING: true
-    commands:
-      - cd frontend
-      - npm install
-      - npm start    
