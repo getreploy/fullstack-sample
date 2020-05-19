@@ -1,14 +1,14 @@
 services:
   backend:
     port: 5000
-    image: reploy/go
+    image: reploy/go:v1
     commands: 
       - cd backend
       - go build -o reploy
       - ./reploy
   frontend:
     port: 3000
-    image: reploy/nodejs
+    image: reploy/nodejs:v1
     commands: 
       - cd frontend
       - npm install
