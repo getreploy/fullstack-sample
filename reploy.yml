@@ -7,4 +7,15 @@ services:
     commands: 
       - cd backend
       - printenv
+      - env
+      - tail -f /dev/null
+  backend:
+    port: 5000
+    image: reploy/nodejs:v1
+    environment:
+      DEBUG: true
+    commands: 
+      - cd backend
+      - printenv
+      - env
       - tail -f /dev/null
