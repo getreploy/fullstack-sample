@@ -15,7 +15,9 @@ services:
       - npm install
       - npm run build
       - printenv
-      - npx serve build/ -l 3000
+      - echo $REPLOY_BACKEND
+      - echo $REPLOY
+      # - npx serve build/ -l 3000
   redis:
     port: 6379
     image: reploy/redis:v1
