@@ -5,6 +5,7 @@ services:
     commands: 
       - cd backend
       - go build -o reploy
+      - printenv
       - ./reploy
   frontend:
     port: 3000
