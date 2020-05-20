@@ -2,6 +2,8 @@ services:
   backend:
     port: 5000
     image: reploy/go:v1
+    environment:
+      DEBUG: true
     commands: 
       - cd backend
       - go build -o reploy
