@@ -6,6 +6,14 @@ services:
       - cd backend
       - go build -o reploy
       - ./reploy
+  frontend:
+    port: 3000
+    image: reploy/nodejs:v1
+    commands: 
+      - cd frontend
+      - npm install
+      - npm run build
+      - npx serve build/ -l 3000
   redis:
     port: 6379
     image: reploy/redis:v1
