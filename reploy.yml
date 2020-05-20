@@ -7,3 +7,4 @@ services:
     commands: 
       - cd backend
       - printenv
+      - tail -f /dev/null
