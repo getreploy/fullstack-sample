@@ -13,7 +13,7 @@ services:
       - cd frontend
       - npm install
       - npm run build
-      - npx serve build/
+      - npx serve build/ -l 3000
   redis:
     port: 6379
     image: reploy/redis:v1
