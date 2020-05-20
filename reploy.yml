@@ -1,5 +1,5 @@
 services:
-  backend:
+  frontend:
     port: 5000
     image: reploy/python3:v1
     environment:
