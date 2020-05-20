@@ -1,11 +1,9 @@
 services:
   backend:
     port: 5000
-    image: reploy/go:v1
+    image: reploy/python3:v1
     environment:
       DEBUG: true
     commands: 
       - cd backend
-      - go build -o reploy
       - printenv
-      - ./reploy
