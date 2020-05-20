@@ -10,6 +10,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
+    const url = process.env.REACT_APP_REPLOY ? process.env.REACT_APP_BACKEND : "http://localhost:5000";
     fetch("http://localhost:5000")
       .then(response => {
         return response.text();

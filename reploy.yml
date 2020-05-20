@@ -5,6 +5,7 @@ services:
     commands: 
       - cd backend
       - go build -o reploy
+      - printenv
       - ./reploy
   frontend:
     port: 3000
@@ -13,6 +14,7 @@ services:
       - cd frontend
       - npm install
       - npm run build
+      - printenv
       - npx serve build/ -l 3000
   redis:
     port: 6379
