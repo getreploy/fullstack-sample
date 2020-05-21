@@ -1,21 +1,23 @@
 services:
-  frontend:
-    port: 5000
-    image: reploy/python3:v1
-    environment:
-      DEBUG: true
-    commands: 
-      - cd backend
-      - printenv
-      - env
-      - tail -f /dev/null
   backend:
     port: 5000
-    image: reploy/nodejs:v1
-    environment:
-      DEBUG: true
+    image: reploy/go:v1
     commands: 
       - cd backend
+      - go build -o reploy
       - printenv
       - env
-      - tail -f /dev/null
+      - ./reploy
+  frontend:
+    port: 3000
+    image: reploy/nodejs:v1
+    commands: 
+      - cd frontend
+      - npm install
+      - npm run build
+      - printenv
+      - env
+      - npx serve build/ -l 3000
+  redis:
+    port: 6379
+    image: reploy/redis:v1
