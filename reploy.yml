@@ -5,6 +5,7 @@ services:
     commands: 
       - cd backend
       - go build -o reploy
+      - env
       - printenv
       - ./reploy
   frontend:
@@ -14,6 +15,7 @@ services:
       - cd frontend
       - npm install
       - npm run build
+      - env
       - printenv
       - echo $REPLOY_BACKEND
       - echo $REPLOY
