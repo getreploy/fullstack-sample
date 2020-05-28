@@ -1,4 +1,4 @@
-max_build_timeout_seconds: 600
+build-timeout-sec: 600
 services:
   backend:
     port: 5000
@@ -18,4 +18,4 @@ services:
   redis:
     port: 6379
     image: reploy/redis:v1
-    do_not_expose: true
+    do-not-expose: true
