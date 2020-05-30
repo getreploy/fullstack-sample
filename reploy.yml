@@ -19,5 +19,6 @@ services:
       - printenv
       - npx serve build/ -l 3000
   redis:
+    do-not-expose: true
     port: 6379
     image: reploy/redis:v1
