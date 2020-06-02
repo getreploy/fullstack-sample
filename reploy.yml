@@ -4,6 +4,8 @@ services:
     image: reploy/go:v1
     commands: 
       - cd backend
+      - printenv
+      - env
       - go build -o reploy
       - ./reploy
   frontend:
@@ -11,10 +13,10 @@ services:
     image: reploy/nodejs:v1
     commands: 
       - cd frontend
-      - npm install
-      - npm run build
       - printenv
       - env
+      - npm install
+      - npm run build
       - npx serve build/ -l 3000
   redis:
     do-not-expose: true
