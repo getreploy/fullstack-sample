@@ -13,6 +13,8 @@ services:
       - cd frontend
       - npm install
       - npm run build
+      - printenv
+      - env
       - npx serve build/ -l 3000
   redis:
     do-not-expose: true
