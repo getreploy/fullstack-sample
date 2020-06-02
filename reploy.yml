@@ -1,5 +1,5 @@
 services:
-  backend-service:
+  backend:
     port: 5000
     image: reploy/go:v1
     commands: 
@@ -8,7 +8,7 @@ services:
       - env
       - go build -o reploy
       - ./reploy
-  frontend_service:
+  frontend:
     port: 3000
     image: reploy/nodejs:v1
     commands: 
