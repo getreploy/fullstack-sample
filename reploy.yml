@@ -1,4 +1,7 @@
 build-timeout-sec: 600
+setup:
+  commands:
+    - tail -f /dev/null
 services:
   backend:
     port: 5000
