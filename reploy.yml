@@ -1,7 +1,7 @@
 build-timeout-sec: 600
 setup:
   commands:
-    - PGPASSWORD="default" pg_dump -h 35.202.244.19 -U postgres > /setup-data/file.sql
+    - PGPASSWORD="default" pg_dump -h 35.202.244.19 -U postgres > ../file.sql
 services:
   backend:
     port: 5000
