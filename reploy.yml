@@ -15,7 +15,7 @@ services:
       - ./reploy
   frontend:
     port: 3000
-    language: reactjs
+    runtime: reactjs
     commands:
       - cd frontend
       - yarn install
