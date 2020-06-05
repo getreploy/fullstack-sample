@@ -1,22 +1,18 @@
 services:
   backend:
     port: 5000
-    image: reploy/go:v1
+    language: go
     commands: 
       - cd backend
-      - printenv
-      - env
       - go build -o reploy
       - ./reploy
   frontend:
     port: 3000
-    image: reploy/nodejs:v1
+    language: reactjs
     commands: 
       - cd frontend
-      - printenv
-      - env
-      - npm install
-      - npm run build
+      - yarn install
+      - yarn build
       - npx serve build/ -l 3000
   redis:
     do-not-expose: true
