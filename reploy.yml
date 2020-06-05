@@ -34,7 +34,7 @@ services:
     do-not-expose: true
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
-      POSTGRES_USER: default
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
 
