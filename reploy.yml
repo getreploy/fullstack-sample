@@ -8,7 +8,7 @@ setup:
 services:
   backend:
     port: 5000
-    language: go
+    runtime: go
     commands: 
       - cd backend
       - go build -o reploy
