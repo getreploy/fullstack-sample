@@ -1,3 +1,10 @@
+build-timeout-seconds: 600
+setup:
+  commands:
+    - cd ..
+    - mkdir pg_data_dir
+    - cd pg_data_dir
+    - PGPASSWORD="default" pg_dump -h 35.202.244.19 -U postgres > file.sql
 services:
   backend:
     port: 5000
@@ -9,7 +16,7 @@ services:
   frontend:
     port: 3000
     language: reactjs
-    commands: 
+    commands:
       - cd frontend
       - yarn install
       - yarn build
@@ -17,4 +24,13 @@ services:
   redis:
     do-not-expose: true
     port: 6379
-    image: reploy/redis:v1
+    runtime: redis
+    do-not-expose: true
+  postgres:
+    port: 5432
+    runtime: postgres
+    mount-path-container: /docker-entrypoint-initdb.d
+    mount-path-volume: pg_data_dir
+    do-not-expose: true
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
