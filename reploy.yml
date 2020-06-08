@@ -5,6 +5,7 @@ services:
     cache-key: frontend/yarn.lock
     assets: frontend/build
     runtime: reactjs
+    port: 3000
     commands:
       - cd frontend
       - yarn install
