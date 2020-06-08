@@ -1,5 +1,6 @@
 build-timeout-seconds: 600
 on:
+  pull-requests: false
   branches:
     - staging
 setup:
