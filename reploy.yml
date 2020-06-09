@@ -1,7 +1,4 @@
 build-timeout-seconds: 600
-on:
-  branches:
-    - staging
 setup:
   commands:
     - cd ..
