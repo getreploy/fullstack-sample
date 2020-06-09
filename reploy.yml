@@ -8,33 +8,26 @@ setup:
 services:
   backend:
     port: 5000
-    runtime: go
-    commands: 
+    image: reploy/go:v1
+    commands:
       - cd backend
       - go build -o reploy
       - ./reploy
   frontend:
     port: 3000
-    runtime: reactjs
+    image: reploy/nodejs:v1
     commands:
       - cd frontend
-      - yarn install
-      - yarn build
+      - npm install
+      - npm run build
       - npx serve build/ -l 3000
   redis:
-    do-not-expose: true
     port: 6379
-    runtime: redis
+    image: reploy/redis:v1
     do-not-expose: true
   postgres:
     port: 5432
-    runtime: postgres
-    mount-path-container: /docker-entrypoint-initdb.d
-    mount-path-volume: pg_data_dir
+    image: reploy/postgres:v1
     do-not-expose: true
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
-
