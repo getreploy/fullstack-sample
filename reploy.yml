@@ -1,4 +1,7 @@
 build-timeout-seconds: 600
+on:
+  branches:
+    - staging
 setup:
   commands:
     - cd ..
@@ -37,4 +40,3 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
-
