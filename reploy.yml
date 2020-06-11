@@ -2,8 +2,8 @@ services:
   frontend:
     runtime: reactjs
     port: 3000
+    path: frontend
     commands:
-      - cd frontend
       - yarn install
       - yarn build
       - npx serve build/ -l 3000
