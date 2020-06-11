@@ -8,8 +8,13 @@ services:
       - yarn build
       - npx serve build/ -l 3000
   backend:
+    port: 5000
     runtime: go
-    port: 8080
-    commands:
+    commands: 
       - cd backend
-      - go run .
+      - go build -o reploy
+      - ./reploy
+  redis:
+    port: 6379
+    runtime: reploy/redis:v1
+
