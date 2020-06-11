@@ -7,3 +7,9 @@ services:
       - yarn install
       - yarn build
       - npx serve build/ -l 3000
+  backend:
+    runtime: go
+    port: 8080
+    commands:
+      - cd backend
+      - go run .
