@@ -1,3 +1,6 @@
+on:
+  branches:
+    - staging
 services:
   frontend:
     runtime: reactjs
