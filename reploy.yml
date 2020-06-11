@@ -10,8 +10,8 @@ services:
   backend:
     port: 5000
     runtime: go
+    path: backend
     commands: 
-      - cd backend
       - go build -o reploy
       - ./reploy
   redis:
