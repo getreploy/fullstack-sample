@@ -15,6 +15,7 @@ services:
       - go build -o reploy
       - ./reploy
   redis:
+    do-not-expose: true
     port: 6379
     runtime: redis
 
