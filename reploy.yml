@@ -18,3 +18,4 @@ services:
     do-not-expose: true
     port: 6379
     runtime: redis
+
