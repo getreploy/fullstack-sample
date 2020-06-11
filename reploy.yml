@@ -1,12 +1,9 @@
 services:
   frontend:
-    type: static
-    cache-path: frontend/node_modules
-    cache-key: frontend/yarn.lock
-    assets: frontend/build
     runtime: reactjs
     port: 3000
     commands:
       - cd frontend
       - yarn install
       - yarn build
+      - npx serve build/ -l 3000
