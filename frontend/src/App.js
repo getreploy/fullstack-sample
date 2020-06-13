@@ -36,7 +36,7 @@ class App extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Hello world. 4607f7e
+              Hello world. new sta
             </a>
           </header>
         </div>
