@@ -1,0 +1,39 @@
+build-timeout-seconds: 600
+on:
+  branches:
+    - staging
+setup:
+  commands:
+    - cd ..
+    - mkdir pg_data_dir
+    - cd pg_data_dir
+    - PGPASSWORD="default" pg_dump -h 35.202.244.19 -U postgres > file.sql
+services:
+  backend:
+    port: 5000
+    image: reploy/go:v1
+    commands:
+      - cd backend
+      - go build -o reploy
+      - ./reploy
+  frontend:
+    port: 3000
+    image: reploy/nodejs:v1
+    commands:
+      - cd frontend
+      - npm install
+      - npm run build
+      - npx serve build/ -l 3000
+  redis:
+    do-not-expose: true
+    port: 6379
+    image: reploy/redis:v1
+    do-not-expose: true
+  postgres:
+    port: 5432
+    image: reploy/postgres:v1
+    mount-path-container: /docker-entrypoint-initdb.d
+    mount-path-volume: pg_data_dir
+    do-not-expose: true
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
