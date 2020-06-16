@@ -3,16 +3,18 @@ services:
     runtime: reactjs
     port: 3000
     path: frontend
-    commands:
+    build:
       - yarn install
       - yarn build
+    serve:
       - npx serve build/ -l 3000
   backend:
     port: 5000
     runtime: go
     path: backend
-    commands: 
+    build: 
       - go build -o reploy
+    serve:
       - ./reploy
   redis:
     do-not-expose: true
