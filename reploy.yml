@@ -1,3 +1,6 @@
+cache:
+  - file: frontend/yarn.lock
+  - path: frontend/node_modules
 services:
   frontend:
     runtime: reactjs
