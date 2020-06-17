@@ -6,19 +6,17 @@ services:
     runtime: reactts
     port: 3000
     path: frontend
-    build:
+    commands:
       - yarn add react-scripts@latest -g
       - yarn install
       - yarn build
-    serve:
       - npx serve build/ -l 3000
   backend:
     port: 5000
     runtime: go
     path: backend
-    build: 
+    commands: 
       - go build -o reploy
-    serve:
       - ./reploy
   redis:
     do-not-expose: true
