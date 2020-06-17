@@ -7,8 +7,9 @@ services:
     port: 3000
     path: frontend
     build:
+      - yarn add react-scripts@latest -g
       - yarn install
-      - yarn run build
+      - yarn build
     serve:
       - npx serve build/ -l 3000
   backend:
