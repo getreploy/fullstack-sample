@@ -3,11 +3,11 @@ cache:
     path: frontend/node_modules
 services:
   frontend:
-    runtime: reactts-yarn
+    runtime: reactts
     port: 3000
     path: frontend
     build:
-      - react-scripts
+      - yarn add react-scripts@latest -g
       - yarn install
       - yarn build
     serve:
