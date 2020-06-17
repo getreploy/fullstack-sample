@@ -9,7 +9,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   },
-  "devdependencies": {
+  "devDependencies": {
     "react-scripts": "^3.4.1"
   },
   "scripts": {
