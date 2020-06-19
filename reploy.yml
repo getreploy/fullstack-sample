@@ -12,20 +12,22 @@ services:
   backend:
     port: 5000
     runtime: go
-    commands: 
+    build: 
       - cd backend
       - go build -o reploy
+    serve:
       - ./reploy
   frontend:
     port: 3000
     runtime: reactjs
-    commands:
+    build:
       - cd frontend
       - yarn install
       - yarn build
+    serve:
+      - cd frontend
       - npx serve build/ -l 3000
   redis:
-    do-not-expose: true
     port: 6379
     runtime: redis
     do-not-expose: true
