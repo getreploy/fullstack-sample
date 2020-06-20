@@ -5,8 +5,7 @@ services:
     path: frontend
     build:
       - yarn cache dir
-      - cd ~
-      - pwd
+      - echo $HOME
       - yarn install --frozen-lockfile
       - yarn build
     serve:
