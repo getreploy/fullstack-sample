@@ -7,6 +7,7 @@ services:
     port: 3000
     path: frontend
     build:
+      - ls node_modules/
       - yarn install
       - yarn build
     serve:
