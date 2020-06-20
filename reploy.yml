@@ -14,3 +14,5 @@ services:
       - ls -a .yarn-cache
     serve:
       - npx serve build/ -l 3000
+    environment:
+      SKIP_PREFLIGHT_CHECK: true
