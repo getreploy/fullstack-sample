@@ -14,17 +14,3 @@ services:
       - ls -a .yarn-cache
     serve:
       - npx serve build/ -l 3000
-    environment:
-      SKIP_PREFLIGHT_CHECK: true
-  backend:
-    port: 5000
-    runtime: go
-    path: backend
-    build: 
-      - go build -o reploy
-    serve:
-      - ./reploy
-  redis:
-    do-not-expose: true
-    port: 6379
-    runtime: redis
