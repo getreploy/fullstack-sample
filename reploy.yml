@@ -4,8 +4,8 @@ services:
     port: 3000
     path: frontend
     build:
+      - yarn config set cache-folder $(pwd)/.yarn-cache
       - yarn cache dir
-      - echo $HOME
       - yarn install --frozen-lockfile
       - yarn build
     serve:
