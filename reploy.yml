@@ -1,3 +1,6 @@
+cache:
+  - file: frontend/yarn.lock
+    path: frontend/.yarn-cache
 services:
   frontend:
     image: reploy/node
@@ -8,6 +11,7 @@ services:
       - yarn cache dir
       - yarn install --frozen-lockfile
       - yarn build
+      - ls -a .yarn-cache
     serve:
       - npx serve build/ -l 3000
     environment:
