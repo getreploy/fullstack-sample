@@ -7,7 +7,6 @@ services:
     port: 3000
     path: frontend
     build:
-      - yarn add react-scripts@latest -g
       - yarn install
       - yarn build
     serve:
