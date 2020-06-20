@@ -9,9 +9,9 @@ services:
     build:
       - yarn config set cache-folder $(pwd)/.yarn-cache
       - yarn cache dir
+      - yarn cache dir
       - yarn install --frozen-lockfile
       - yarn build
-      - echo "hi"
       - ls -a .yarn-cache
     serve:
       - npx serve build/ -l 3000
