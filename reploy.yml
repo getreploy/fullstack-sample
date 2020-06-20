@@ -11,6 +11,7 @@ services:
       - yarn cache dir
       - yarn install --frozen-lockfile
       - yarn build
+      - echo "hi"
       - ls -a .yarn-cache
     serve:
       - npx serve build/ -l 3000
