@@ -9,7 +9,7 @@ services:
     build:
       - yarn add react-scripts@latest -g
       - yarn add create-react-app@latest -g
-      - yarn install
+      - yarn install --frozen-lockfile
       - yarn build
     serve:
       - npx serve build/ -l 3000
