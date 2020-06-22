@@ -1,13 +1,3 @@
-build-timeout-seconds: 1200
-on:
-  branches:
-    - staging
-setup:
-  commands:
-    - cd ..
-    - mkdir pg_data_dir
-    - cd pg_data_dir
-    - PGPASSWORD="default" pg_dump -h 35.202.244.19 -U postgres > file.sql
 services:
   backend:
     port: 5000
