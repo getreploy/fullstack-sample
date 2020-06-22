@@ -12,18 +12,18 @@ services:
     serve:
       - ./reploy
     environment:
-      - KEY1: val1
-      - KEY2: |
-          define( 'WP_REDIS_CLIENT', 'predis' );
-          define( 'WP_REDIS_SCHEME', 'tcp' );
-          define( 'WP_REDIS_HOST', 'redis' );
-          define( 'WP_REDIS_PORT', '6379' );
-          define( 'WP_REDIS_PASSWORD', 'xxxxxxxxxxxxxxx' );
-          define( 'WP_REDIS_DATABASE', '0' );
-          define( 'WP_REDIS_MAXTTL', '21600' );
-          define( 'WP_CACHE_KEY_SALT', 'xx_ ');
-          define( 'WP_REDIS_SELECTIVE_FLUSH', 'xx_ ');
-          define( 'WP_AUTO_UPDATE_CORE', false );
+      KEY1: val1
+      KEY2: |
+        define( 'WP_REDIS_CLIENT', 'predis' );
+        define( 'WP_REDIS_SCHEME', 'tcp' );
+        define( 'WP_REDIS_HOST', 'redis' );
+        define( 'WP_REDIS_PORT', '6379' );
+        define( 'WP_REDIS_PASSWORD', 'xxxxxxxxxxxxxxx' );
+        define( 'WP_REDIS_DATABASE', '0' );
+        define( 'WP_REDIS_MAXTTL', '21600' );
+        define( 'WP_CACHE_KEY_SALT', 'xx_ ');
+        define( 'WP_REDIS_SELECTIVE_FLUSH', 'xx_ ');
+        define( 'WP_AUTO_UPDATE_CORE', false );
   frontend:
     port: 3000
     runtime: reactjs
