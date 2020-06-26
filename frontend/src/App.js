@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +12,10 @@ class App extends Component {
   }
   componentDidMount() {
     console.log(process.env.REACT_APP_REPLOY_BACKEND);
-    const url = process.env.REACT_APP_REPLOY === "true" ? process.env.REACT_APP_REPLOY_BACKEND : "http://localhost:5000";
+    const url =
+      process.env.REACT_APP_REPLOY === "true"
+        ? process.env.REACT_APP_REPLOY_BACKEND
+        : "http://localhost:5000";
     fetch(url)
       .then(response => {
         return response.text();
@@ -22,25 +26,29 @@ class App extends Component {
   }
   render() {
     return (
-      this.state && (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Chicken Nugget: <br />
-              <code>{this.state.data}</code>
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Hello world.
-            </a>
-          </header>
-        </div>
-      )
+      <Router>
+        <Route path="/">
+          {this.state && (
+            <div className="App">
+              <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                  Chicken Nugget: <br />
+                  <code>{this.state.data}</code>
+                </p>
+                <a
+                  className="App-link"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Hello world.
+                </a>
+              </header>
+            </div>
+          )}
+        </Route>
+      </Router>
     );
   }
 }
