@@ -16,7 +16,7 @@ services:
       - yarn install
       - yarn build
     serve:
-      - npx serve build/ -l 3000
+      - npx serve build/ -l 3000 -s
   redis:
     port: 6379
     runtime: redis
