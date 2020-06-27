@@ -9,7 +9,7 @@ services:
       - ./reploy
   frontend:
     port: 3000
-    health: /test
+    health: test/
     runtime: reactjs
     path: frontend
     build:
