@@ -14,7 +14,6 @@ services:
       - go build -o reploy
       - ./reploy
   frontend:
-    port: 3000
     ports:
       - 6001
       - 7001
