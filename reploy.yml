@@ -5,6 +5,7 @@ services:
     path: backend
     build: 
       - go build -o reploy
+      - exit 1
     serve:
       - ./reploy
   frontend:
@@ -13,6 +14,7 @@ services:
     runtime: reactjs
     path: frontend
     build:
+      - exit 1
       - yarn install
       - yarn build
     serve:
