@@ -25,8 +25,6 @@ services:
   postgres:
     port: 5432
     runtime: postgres
-    mount-path-container: /docker-entrypoint-initdb.d
-    mount-path-volume: pg_data_dir
     do-not-expose: true
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
