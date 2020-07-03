@@ -36,7 +36,7 @@ class App extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Hello world.
+              Hello world. Rainforest.
             </a>
           </header>
         </div>
