@@ -5,9 +5,12 @@ on:
 services:
   backend:
     ports:
-      - 5000
-      - 7000
-      - 6500
+      - port: 5000
+        name: home
+      - port: 7000
+        name: home2
+      - port: 8000
+        name: home3
     runtime: go
     commands:
       - cd backend
@@ -15,9 +18,12 @@ services:
       - ./reploy
   frontend:
     ports:
-      - 3000
-      - 7001
-      - 6501
+      - port: 3000
+        name: home
+      - port: 7001
+        name: home2
+      - port: 8001
+        name: home3
     runtime: reactjs
     commands:
       - cd frontend
