@@ -3,6 +3,7 @@ on:
   branches:
     - staging
 setup:
+  image: reploy/nodejs
   commands:
     - cd ..
     - mkdir pg_data_dir
