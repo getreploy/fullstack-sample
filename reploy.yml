@@ -1,6 +1,8 @@
-on:
-  branches:
-    - staging
+cache:
+  - file: frontend/yarn.lock
+    path: frontend/node_modules
+  - file: frontend/yarn.lock
+    path: frontend/.yarn-cache
 services:
   backend:
     port: 5000
@@ -15,7 +17,8 @@ services:
     runtime: reactjs
     path: frontend
     build:
-      - yarn install
+      - yarn config set cache-folder $(pwd)/.yarn-cache
+      - yarn install --frozen-lockfile
       - yarn build
     serve:
       - npx serve build/ -l 3000
