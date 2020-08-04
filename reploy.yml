@@ -18,7 +18,7 @@ services:
     path: frontend
     build:
       - yarn config set cache-folder $(pwd)/.yarn-cache
-      - yarn install --frozen-lockfile
+      - yarn install --frozen-lockfile --prefer-offline
       - yarn build
     serve:
       - npx serve build/ -l 3000
