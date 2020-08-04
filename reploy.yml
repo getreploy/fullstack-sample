@@ -1,6 +1,6 @@
 on:
   branches:
-    - staging
+    - him229-test-per-branch
 services:
   backend:
     port: 5000
