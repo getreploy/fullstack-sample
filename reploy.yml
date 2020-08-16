@@ -3,7 +3,11 @@ on:
     - staging
 services:
   backend:
-    port: 5000
+    ports: 
+      - name: ui
+        port: 5000
+      - name: test
+        port: 5001
     runtime: go
     path: backend
     build: 
