@@ -1,31 +1,23 @@
-build-timeout-seconds: 1200
 on:
   branches:
     - staging
-setup:
-  commands:
-    - cd ..
-    - mkdir pg_data_dir
-    - cd pg_data_dir
-    - PGPASSWORD="default" pg_dump -h 35.202.244.19 -U postgres > file.sql
 services:
   backend:
     port: 5000
     runtime: go
+    path: backend
     build: 
-      - cd backend
       - go build -o reploy
     serve:
       - ./reploy
   frontend:
     port: 3000
     runtime: reactjs
+    path: frontend
     build:
-      - cd frontend
       - yarn install
       - yarn build
     serve:
-      - cd frontend
       - npx serve build/ -l 3000
   redis:
     port: 6379
@@ -34,8 +26,6 @@ services:
   postgres:
     port: 5432
     runtime: postgres
-    mount-path-container: /docker-entrypoint-initdb.d
-    mount-path-volume: pg_data_dir
     do-not-expose: true
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
