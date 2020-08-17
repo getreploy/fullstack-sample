@@ -27,8 +27,7 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-              Chicken Nugget: <br />
-              <code>{this.state.data}</code>
+              THIS IS A SIMPLE APP: <br />
             </p>
             <a
               className="App-link"
