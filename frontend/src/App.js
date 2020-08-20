@@ -27,7 +27,7 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-              Hello React App: <br />
+              Hello there: <br />
               <code>{this.state.data}</code>
             </p>
             <a
