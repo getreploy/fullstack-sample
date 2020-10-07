@@ -3,7 +3,7 @@ image-secret-keys:
 services:
   backend:
     port: 5000
-    image: gcr.io/himank-jay/polyglott-python3
+    image: gcr.io/clientgreen/node13
     build:
       - ls
     serve:
