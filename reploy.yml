@@ -1,5 +1,5 @@
 image-secret-keys:
-  - 
+  - CLOUD_SECRET
 services:
   backend:
     port: 5000
