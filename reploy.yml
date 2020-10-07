@@ -3,7 +3,7 @@ image-secret-keys:
 services:
   backend:
     port: 5000
-    image: gcr.io/clientgreen/node13
+    image: gcr.io/github-api/node13:v1
     build:
       - ls
     serve:
