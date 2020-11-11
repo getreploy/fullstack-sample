@@ -5,7 +5,6 @@ services:
     path: backend
     build:
       - go build -o reploy
-    serve:
       - ./reploy
   frontend:
     port: 3000
