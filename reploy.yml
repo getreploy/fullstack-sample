@@ -1,6 +1,10 @@
 services:
   backend:
-    port: 5000
+    ports:
+      - name: smtp
+        value: 1025
+      - name: web
+        value: 5000
     runtime: go
     path: backend
     build:
