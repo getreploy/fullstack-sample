@@ -3,6 +3,7 @@ services:
     ports:
       - name: smtp
         port: 1025
+        do-not-expose: true
       - name: web
         port: 5000
     runtime: go
