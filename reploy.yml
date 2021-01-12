@@ -16,7 +16,6 @@ services:
     runtime: reactjs
     path: frontend
     build:
-      - ls
       - yarn install
       - yarn build
     serve:
