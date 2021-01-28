@@ -2,20 +2,5 @@ image-secret-keys:
   - CLOUD_SECRET
 services:
   backend:
-    port: 5432
-    do-not-expose: true
-    image: gcr.io/himank-jay/postgres:v1
-    build:
-      - ls
-    serve:
-      - ls
-  frontend:
-    port: 3000
-    runtime: reactjs
-    build:
-      - cd frontend
-      - yarn install
-      - yarn build
-    serve:
-      - cd frontend
-      - npx serve build/ -l 3000
+    port: 25565
+    image: registry.gitlab.com/monofuel34089/mineserver/forge
