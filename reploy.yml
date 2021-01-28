@@ -9,3 +9,13 @@ services:
       - ls
     serve:
       - ls
+  frontend:
+    port: 3000
+    runtime: reactjs
+    build:
+      - cd frontend
+      - yarn install
+      - yarn build
+    serve:
+      - cd frontend
+      - npx serve build/ -l 3000
