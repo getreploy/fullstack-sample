@@ -4,7 +4,7 @@ services:
   backend:
     port: 5432
     do-not-expose: true
-    image: gcr.io/himank-jay/postgres
+    image: gcr.io/himank-jay/postgres:v1
     build:
       - ls
     serve:
