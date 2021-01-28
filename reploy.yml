@@ -2,8 +2,9 @@ image-secret-keys:
   - CLOUD_SECRET
 services:
   backend:
-    port: 5000
-    image: gcr.io/github-api/node13:v1
+    port: 5432
+    do-not-expose: true
+    image: gcr.io/himank-jay/postgres
     build:
       - ls
     serve:
