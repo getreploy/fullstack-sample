@@ -1,4 +1,4 @@
-image-secret-keys:
+docker-secret-vars:
   - CLOUD_SECRET
 services:
   backend:
