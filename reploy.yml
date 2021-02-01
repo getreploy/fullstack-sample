@@ -1,5 +1,6 @@
 registry-auth:
   - registry: registry.gitlab.com
+    username: monofuel34089
     password-env-var: CLOUD_SECRET
 services:
   backend:
