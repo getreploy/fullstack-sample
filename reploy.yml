@@ -1,5 +1,6 @@
-image-secret-vars:
-  - CLOUD_SECRET
+registry-auth:
+  - registry: registry.gitlab.com
+    password-env-var: CLOUD_SECRET
 services:
   backend:
     port: 25565
