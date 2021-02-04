@@ -15,7 +15,10 @@ services:
       - ./reploy
   frontend:
     port: 3000
-    runtime: reactjs
+    image: gcr.io/github-api/node13:v1
+    registry-auth:
+      - registry: gcr.io
+        password-env-var: GCP_KEY
     path: frontend
     build:
       - yarn install
