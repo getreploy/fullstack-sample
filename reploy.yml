@@ -1,3 +1,6 @@
+registry-auth:
+  - registry: gcr.io
+    password-env-var: GCP_KEY
 services:
   backend:
     ports:
@@ -16,9 +19,6 @@ services:
   frontend:
     port: 3000
     image: gcr.io/github-api/node13:v1
-    registry-auth:
-      - registry: gcr.io
-        password-env-var: GCP_KEY
     path: frontend
     build:
       - yarn install
