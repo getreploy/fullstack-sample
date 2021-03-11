@@ -1,4 +1,7 @@
 build-timeout-seconds: 1200
+    invalid yaml
+    to test config
+    errors
 on:
   branches:
     - staging
