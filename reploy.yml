@@ -3,8 +3,8 @@ on:
   branches:
     - staging
 cache:
-  - file: yarn.lock
-    path: node_modules
+  - file: frontend/yarn.lock
+    path: frontend/node_modules
 services:
   backend:
     port: 5000
