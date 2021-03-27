@@ -2,6 +2,9 @@ build-timeout-seconds: 1200
 on:
   branches:
     - staging
+cache:
+  - file: yarn.lock
+    path: node_modules
 services:
   backend:
     port: 5000
