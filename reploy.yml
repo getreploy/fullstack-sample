@@ -20,7 +20,6 @@ services:
     path: frontend
     build:
       - yarn install
-      - sleep 180
       - yarn build
     serve:
       - npx serve build/ -l 3000
