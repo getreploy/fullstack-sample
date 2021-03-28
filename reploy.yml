@@ -21,6 +21,7 @@ services:
     build:
       - yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
       - yarn build
+      - cd ~; ls -al
     serve:
       - npx serve build/ -l 3000
   redis:
