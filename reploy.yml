@@ -4,7 +4,7 @@ on:
     - staging
 cache:
   - file: frontend/yarn.lock
-    path: ~/.cache/yarn
+    path: .cache/yarn
 services:
   backend:
     port: 5000
@@ -19,7 +19,7 @@ services:
     runtime: reactjs
     path: frontend
     build:
-      - yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+      - yarn install --frozen-lockfile --cache-folder .cache/yarn
       - yarn build
       - cd ~; ls -al
     serve:
