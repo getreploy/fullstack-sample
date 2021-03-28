@@ -19,7 +19,7 @@ services:
     runtime: reactjs
     path: frontend
     build:
-      - yarn install
+      - yarn install --immutable
       - yarn build
     serve:
       - npx serve build/ -l 3000
