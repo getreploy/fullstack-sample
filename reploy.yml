@@ -19,7 +19,7 @@ services:
     runtime: reactjs
     path: frontend
     build:
-      - yarn install --immutable
+      - yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
       - yarn build
     serve:
       - npx serve build/ -l 3000
