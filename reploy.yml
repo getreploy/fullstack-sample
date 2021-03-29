@@ -4,7 +4,7 @@ on:
     - staging
 cache:
   - file: frontend/yarn.lock
-    path: .cache/yarn
+    path: frontend/.cache/yarn
 services:
   backend:
     port: 5000
