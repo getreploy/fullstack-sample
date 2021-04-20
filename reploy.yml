@@ -1,7 +1,9 @@
-build-timeout-seconds: 1200
 on:
   branches:
     - staging
+cache:
+  - file: frontend/yarn.lock
+    path: frontend/.cache/yarn
 services:
   backend:
     port: 5000
@@ -16,8 +18,9 @@ services:
     runtime: reactjs
     path: frontend
     build:
-      - yarn install
+      - yarn install --frozen-lockfile --cache-folder .cache/yarn
       - yarn build
+      - cd ~; ls -al
     serve:
       - npx serve build/ -l 3000
   redis:
